@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliza Design</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7e9, #b0eacd);
+            color: #2c5e3d;
+            transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e442b, #3d7e5c);
+            color: white;
+            padding: 60px;
+            font-size: 50px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background: #2c5e3d;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul li {
+            padding: 20px 35px;
+            transition: background 0.3s;
+            font-size: 20px;
+        }
+
+        nav ul li:hover {
+            background: #3d7e5c;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 15px 30px;
+            background: #3d7e5c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: #2c5e3d;
+        }
+
+        main {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .section {
+            padding: 60px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #1e442b, #3d7e5c);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 60px;
+        }
+
+        .dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .section {
+            background: #1e1e1e;
+        }
+
+        .dark-mode header,
+        .dark-mode footer,
+        .dark-mode nav ul {
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Переключить тему</button>
+    <header id="title">Eliza Design - Искусство будущего</header>
+    <nav>
+        <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="section" id="about">
+            <h2>О компании</h2>
+            <p>Eliza создаёт уникальные дизайнерские решения для любых проектов, от брендинга до веб-дизайна.</p>
+        </div>
+        <div class="section" id="services">
+            <h2>Наши услуги</h2>
+            <p>Мы предлагаем разработку логотипов, UX/UI дизайн, анимацию и другие инновационные решения.</p>
+        </div>
+        <div class="section" id="portfolio">
+            <h2>Портфолио</h2>
+            <p>Оцените наши лучшие работы, вдохновлённые современными трендами дизайна.</p>
+        </div>
+        <div class="section" id="team">
+            <h2>Наша команда</h2>
+            <p>Профессиональные дизайнеры и разработчики создают первоклассные решения для клиентов по всему миру.</p>
+        </div>
+        <div class="section" id="clients">
+            <h2>Отзывы клиентов</h2>
+            <p>«Eliza Design — это невероятный опыт работы с профессионалами, знающими своё дело!»</p>
+        </div>
+        <div class="section" id="news">
+            <h2>Последние новости</h2>
+            <p>Мы следим за последними трендами и готовы воплотить их в жизнь.</p>
+        </div>
+    </main>
+    <footer>© 2025 Eliza Design. Все права защищены.</footer>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>
